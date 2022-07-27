@@ -15,3 +15,29 @@ p{color: green;}
 img{
     width: 300px;
 }
+
+#nombre{
+    font-weight: bold;
+    margin-top: 20%; 
+}
+
+@media(min-width: 576px){
+    #fotoperfil{
+        width: 150%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px red;
+        left: 2%;
+        top: 600px;
+      }
+    }
+
+    @media(max-width: 576px){
+        #fotoperfil{
+            width: 70%;
+            border-radius: 100%;
+            box-shadow: 3px 3px 3px red;
+            left: 2%;
+            top: 630px;
+        } 
+
+}

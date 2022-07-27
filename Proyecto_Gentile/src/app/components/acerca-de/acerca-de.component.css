@@ -10,6 +10,7 @@ div{
 h1{color: azure;
 }
 
+
 p{color: green;}
 
 img{
@@ -18,7 +19,12 @@ img{
 
 #nombre{
     font-weight: bold;
-    margin-top: 20%; 
+    margin-top: 10%; 
+    color: rgb(15, 75, 75);
+    font-size: 35px;
+    font-family : unispace, sans-serif
+    
+     
 }
 
 @media(min-width: 576px){

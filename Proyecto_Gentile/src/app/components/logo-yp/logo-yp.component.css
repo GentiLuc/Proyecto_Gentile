@@ -1,11 +1,18 @@
-.conteiner{
+.container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.redes{
+    margin-right: 1em;
+    
 }
 #logoYP{
     width: 150px;
 }
 img{
     width: 35px;
+}
+.redes img{
+margin: 0.1em;
 }

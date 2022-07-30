@@ -32,7 +32,7 @@ img{
     #fotoperfil{
         width: 150%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px rgb(44, 201, 78);
+        box-shadow: 3px 3px 3px black;
         left: 2%;
         top: 600px;
       }
@@ -42,7 +42,7 @@ img{
         #fotoperfil{
             width: 70%;
             border-radius: 100%;
-            box-shadow: 3px 3px 3px red;
+            box-shadow: 3px 3px 3px black;
             left: 2%;
             top: 630px;
         } 

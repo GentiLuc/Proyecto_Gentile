@@ -17,7 +17,11 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { InterceptorProvider } from './service/interceptor-service';
-
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +36,17 @@ import { InterceptorProvider } from './service/interceptor-service';
     ProyectosComponent,
     PiepaginaComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule
   ],

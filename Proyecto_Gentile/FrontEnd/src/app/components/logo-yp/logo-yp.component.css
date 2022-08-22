@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family : unispace, sans-serif;
+
 }
 .redes{
     margin-right: 1em;

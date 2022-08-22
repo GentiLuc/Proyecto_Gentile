@@ -1,6 +1,26 @@
 .row{
     padding: 20px;
+    font-family : unispace, sans-serif;
+    
 }
 div{
     background-color: rgb(29, 139, 93);
+}
+
+td{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+}
+
+h2{
+    color: azure;
+    text-align: center;
+    
+}
+
+h4{
+    text-align: center;
 }

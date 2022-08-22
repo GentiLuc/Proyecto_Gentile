@@ -1,5 +1,12 @@
 .row{
     background-color: black;
     padding: 20px;
+    font-family : unispace, sans-serif;
+
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
 }
 

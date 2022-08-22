@@ -1,7 +1,8 @@
 .row{
     padding: 20px;
     font-family : unispace, sans-serif;
-    
+    border: 15px solid rgb(24, 18, 18);
+    text-align: center;
 }
 div{
     background-color: rgb(29, 139, 93);

@@ -1,6 +1,9 @@
 .row{
     padding: 15px;
     font-family : unispace, sans-serif;
+    border: 50px solid aliceblue;
+    border-image-source: url(../../../assets/unnamed-file.html.jpg);
+    border-image-slice:180;
 }
 
 div{

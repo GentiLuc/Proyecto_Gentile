@@ -1,19 +1,20 @@
+
 <div class="row">
     <h1>Proyectos Realizados</h1>
     
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevoP" *ngIf="isLogged">
+    <div id="botonAD" class="col-lg-12">
+        <button  type="button" class="btn btn-dark" routerLink="/nuevoP" *ngIf="isLogged">
             Agregar Proyecto
         </button>  
     </div>
-    
+    <div class="col-lg-4"></div>
    <div class="col-lg-12">
      <table class="table">
        <tbody>
         <tr *ngFor="let Proyectos of proyectos">
             <td><h2>{{Proyectos.nombreP}}</h2></td>
-            <td>{{Proyectos.descripcionP}}</td>
-            <td><img src="../../../assets/bannner2.png" class="img-fluid img-proyecto"></td>
+            <td><h4>{{Proyectos.descripcionP}}</h4></td>
+            <td ><img src="../../../assets/bannner2.png" class="img-fluid"></td>
             <td *ngIf="isLogged"><button class="btn btn-dark"routerLink="/editP/{{Proyectos.id}}"><i class="bi bi-pencil-square" ></i></button></td>   
             <td *ngIf="isLogged">
                 <button class="btn btn-danger" (click)="delete(Proyectos.id)">
@@ -23,5 +24,6 @@
        </tbody> 
     </table>
    </div>
+   
 </div>
 

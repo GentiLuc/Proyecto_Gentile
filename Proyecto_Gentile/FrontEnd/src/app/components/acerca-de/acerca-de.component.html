@@ -2,7 +2,8 @@
 
 
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img src="../../../assets/Perfil.jpg" class="img-fluid" id="fotoperfil">
+    <img [src]="img" class="img-fluid" id="fotoperfil" (click)="file.click()">
+    <input type="file" accept="image/*" #file   class="file" (change)="onChange($event) ">
  </div>
 
 

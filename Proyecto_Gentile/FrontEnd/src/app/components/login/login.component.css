@@ -1,7 +1,10 @@
 .gradient-custom {
 /* fallback for old browsers */
 background: #803fc5;
-width: 100%;
+background-position: 100%;
+
+
+
 
 /* Chrome 10-25, Safari 5.1-6 */
 background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
@@ -19,5 +22,6 @@ background: linear-gradient(to right, rgb(16, 47, 223), rgb(123, 172, 9))
     font-family : unispace, sans-serif;
     
 }
+
 
 

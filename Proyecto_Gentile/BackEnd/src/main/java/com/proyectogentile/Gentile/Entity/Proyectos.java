@@ -1,6 +1,7 @@
 
 package com.proyectogentile.Gentile.Entity;
 
+import com.sun.org.apache.xalan.internal.xsltc.dom.BitArray;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ public class Proyectos {
     private int id;
     private String nombreP;
     private String descripcionP;
+     
 
     public Proyectos() {
     }

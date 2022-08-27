@@ -12,9 +12,9 @@
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h2>{{Educacion.nombreE}}</h2>
+                        <h2>{{Educacion.descripcionE}}</h2>
                     </td>
-                    <td><h4>{{Educacion.descripcionE}}</h4></td>
+                    <td><h4>{{Educacion.nombreE}}</h4></td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-dark" routerLink="/edited/{{Educacion.id}}">
                             <i class="bi bi-pencil-square" ></i> </button>

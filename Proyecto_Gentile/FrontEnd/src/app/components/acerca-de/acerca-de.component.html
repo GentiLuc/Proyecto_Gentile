@@ -1,24 +1,36 @@
 <div class="row">
-
+   <!--  <button type="button" class="btn btn-dark" routerLink="/nuevaA" *ngIf="isLogged">
+      Nueva
+  </button>  -->
 
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img [src]="img" class="img-fluid" id="fotoperfil" (click)="file.click()">
-    <input type="file" accept="image/*" #file   class="file" (change)="onChange($event) ">
+    <img [src]="img" class="img-fluid" id="fotoperfil" >
+    <td *ngIf="isLogged"> <input type="file" accept="image/*" #file   class="file" (change)="onChange($event) "><button class="btn btn-success" (click)="file.click()">
+      <i class="bi bi-folder-plus"></i></button></td>>
  </div>
 
 
-     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <h2 id="nombre">{{persona.nombre}} {{persona.apellido}} </h2><br>
-        <h3> Full Stack Developer Jr</h3>
+     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" *ngFor="let Acercade of acercade">
+        <h2 id="nombre">{{Acercade.nombreA}} </h2><br>
+        <h3>{{Acercade.tituloA}} </h3>
        </div>
 
-  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7"  *ngFor="let Acercade of acercade">
      <span><br>
         <h1>Acerca de Mi</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Magni magnam quis ab distinctio, maxime a tempore adipisci 
-            sed rem quae quisquam eum qui. Possimus sed fugiat harum, dolor 
-            unde minus?</p>
+        <p>{{Acercade.descripcionA}}</p>
      </span>
     </div>
+    <div *ngFor="let Acercade of acercade" >
+    <td *ngIf="isLogged"><button class="btn btn-dark"routerLink="/editA/{{Acercade.id}}">
+      <i class="bi bi-pencil-square" ></i></button></td>   
+  <td *ngIf="isLogged">
+      
+   
+      </td>
+    </div>
+    
 </div>
+
+
+

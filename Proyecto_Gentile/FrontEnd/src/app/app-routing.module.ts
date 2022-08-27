@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditAcercadeComponent } from './components/acerca-de/edit-acercade.component';
+import { NewAcercadeComponent } from './components/acerca-de/new-acercade.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'nuevaed', component: NewEducacionComponent},
   {path: 'edited/:id', component: EditEducacionComponent},
   {path: 'nuevoP', component: NewProyectosComponent},
-  {path: 'editP/:id', component: EditProyectosComponent}
+  {path: 'editP/:id', component: EditProyectosComponent},
+  {path: 'editA/:id', component: EditAcercadeComponent},
+  {path: 'nuevaA', component: NewAcercadeComponent}
 ];
 
 @NgModule({

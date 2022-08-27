@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: Proyectos[] = [];
+  public img: any = "../../../assets/bannner2.png"
 
 
   constructor(private sProyectos: SProyectosService, private tokenService: TokenService) { }
@@ -41,5 +42,16 @@ export class ProyectosComponent implements OnInit {
       )
     }
   }
+
+  onChange(event: any){
+   
+    const file = event.target.files[0];
+   
+    
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.img =reader.result;  }
+    }
 
 }

@@ -14,8 +14,12 @@
         <tr *ngFor="let Proyectos of proyectos">
             <td><h2>{{Proyectos.nombreP}}</h2></td>
             <td><h4>{{Proyectos.descripcionP}}</h4></td>
-            <td ><img src="../../../assets/bannner2.png" class="img-fluid"></td>
-            <td *ngIf="isLogged"><button class="btn btn-dark"routerLink="/editP/{{Proyectos.id}}"><i class="bi bi-pencil-square" ></i></button></td>   
+            <td > <img [src]="img" class="img-fluid" id="fotoP"></td>
+            <td *ngIf="isLogged"> <input type="file" accept="image/*" #file   class="file" (change)="onChange($event) "><button class="btn btn-success" (click)="file.click()">
+                    <i class="bi bi-folder-plus"></i></button></td>
+           
+            <td *ngIf="isLogged"><button class="btn btn-dark"routerLink="/editP/{{Proyectos.id}}">
+                <i class="bi bi-pencil-square" ></i></button></td>   
             <td *ngIf="isLogged">
                 <button class="btn btn-danger" (click)="delete(Proyectos.id)">
                     <i class="bi bi-trash3"></i></button>

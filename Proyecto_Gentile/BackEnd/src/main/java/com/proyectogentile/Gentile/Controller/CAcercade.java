@@ -25,8 +25,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "https://ftgentluc.web.app")
 @RequestMapping("/acercade")
-@CrossOrigin(origins = "http://localhost:4200")
 public class CAcercade {
     @Autowired
     SAcercade sAcercade;
@@ -52,7 +52,7 @@ public class CAcercade {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
         sAcercade.delete(id);
-        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("eliminado"), HttpStatus.OK);
     }
 
     
@@ -61,13 +61,13 @@ public class CAcercade {
         if(StringUtils.isBlank(dtoacd.getNombreA()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if(sAcercade.existsByNombreA(dtoacd.getNombreA()))
-            return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ya existe"), HttpStatus.BAD_REQUEST);
         
         
         Acercade acercade = new Acercade(dtoacd.getNombreA(), dtoacd.getDescripcionA(), dtoacd.getTituloA());
         sAcercade.save(acercade);
         
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Agregado"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
@@ -77,7 +77,7 @@ public class CAcercade {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
         if(sAcercade.existsByNombreA(dtoacd.getNombreA()) && sAcercade.getByNombreA(dtoacd.getNombreA()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtoacd.getNombreA()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -88,7 +88,7 @@ public class CAcercade {
        acercade.setTituloA((dtoacd.getTituloA()));
         
         sAcercade.save(acercade);
-        return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("actualizado"), HttpStatus.OK);
              
     }
 }

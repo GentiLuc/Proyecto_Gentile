@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: Proyectos[] = [];
-  public img: any = "../../../assets/bannner2.png"
+  public img: any = "../../../assets/proyecto.png"
 
 
   constructor(private sProyectos: SProyectosService, private tokenService: TokenService) { }

@@ -8,7 +8,7 @@ import { Acercade } from '../model/acercade';
 })
 export class SAcercadeService {
 
-  URL = 'http://localhost:8080/acercade/'
+  URL = 'https://bkgent.herokuapp.com/acercade/'
 
 
   constructor(private httpClient : HttpClient){}
